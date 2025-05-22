@@ -117,7 +117,9 @@ class Inventario:
   def reporte_por_categoria(self):
     categorias = {}
     for p in self.productos:
-      categorias.setdefault(p.categoria, []).append(p)
+      if p.categoria not in categorias:
+        categorias[p.categoria] = []
+      categorias[p.categoria].append(p)
 
     for categoria, items in categorias.items():
       print(f"\nCategoría: {categoria}")
