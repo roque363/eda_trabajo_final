@@ -59,7 +59,7 @@ class Inventario:
     producto = self.buscar_por_codigo(codigo)
 
     if not producto:
-      print("Producto no encontrado.")
+      print("Error: Producto no encontrado.")
       return
     
     nuevo_nombre = input(f"Nombre ({producto.nombre}): ").strip()
@@ -78,7 +78,7 @@ class Inventario:
     producto = self.buscar_por_codigo(codigo)
 
     if not producto:
-      print("Producto no encontrado.")
+      print("Error: Producto no encontrado.")
       return
     
     print("\n")
